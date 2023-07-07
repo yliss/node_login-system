@@ -1,11 +1,5 @@
 import express from 'express';
-const app = express();
-const port = 3000;
+const mysql = require("mysql")
+const dotenv = require('dotenv')
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-
-app.listen(port, () => {
-  return console.log(`Express is listening at http://localhost:${port}`);
-});
+dotenv.config({ path: './.env'})
